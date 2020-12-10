@@ -12,10 +12,8 @@ on:
 jobs:
   build-java:
 
-    runs-on: ${matrix}
-    strategy:
-    	matrix:
-    	os: ubuntu-18.04
+    runs-on: ubuntu-18.04
+    
     
     steps:
     - uses: actions/checkout@v2
