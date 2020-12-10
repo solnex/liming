@@ -12,7 +12,10 @@ on:
 jobs:
   build-java:
 
-    runs-on: ubuntu-latest
+    runs-on: ${matrix}
+    strategy:
+    	matrix:
+    	os: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v2
