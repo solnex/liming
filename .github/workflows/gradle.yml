@@ -25,7 +25,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     
-    - name: Build And Push Docker image
+    - name: Build And Push Docker images
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: ylmcr7/ubuntu
