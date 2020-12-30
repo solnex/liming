@@ -33,3 +33,10 @@ jobs:
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
+    - name: Setup
+      uses: srt32/git-actions@v0.0.3
+      env:
+        ACTION_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      run:
+        git pull
+        bash /root/test.sh          
