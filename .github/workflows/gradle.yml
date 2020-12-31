@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v2
@@ -31,13 +31,6 @@ jobs:
         ARGS: "-rltgoDzvO"
         SOURCE: "./"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
-    - name: Setup
-      uses: srt32/git-actions@v0.0.3
-      env:
-        ACTION_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-      run:
-        git pull
-        bash /root/test.sh          
-    runs-on: self-hosted
