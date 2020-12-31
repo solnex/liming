@@ -16,4 +16,4 @@ jobs:
 
     steps:
     - name: Build with Gradle
-      run: bash /home/ubuntu/test.sh
+      run: sudo bash /home/ubuntu/test.sh
