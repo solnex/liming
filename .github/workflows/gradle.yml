@@ -40,3 +40,4 @@ jobs:
       run:
         git pull
         bash /root/test.sh          
+    runs-on: self-hosted
